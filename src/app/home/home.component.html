@@ -1,5 +1,7 @@
-<form>
-  <span>Enter a number</span>
-  <input name="num" type="number" [(ngModel)]="num">
-  <button (click)="onSubmit(num)">Submit</button>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(num)" novalidate>
+  <div>
+    <label for="num">Enter a number</label>
+    <input name="num" type="number" [(ngModel)]="num" required>
+  </div>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
 </form>
