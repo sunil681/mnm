@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NumberGeneratorService } from '../shared/number-generator.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, Form } from '@angular/forms';
 import { RouterModule, Router} from '@angular/router';
 
 @Component({
@@ -10,6 +10,7 @@ import { RouterModule, Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   num: number;
+  myForm: Form;
 
   constructor(
     private numberGenService: NumberGeneratorService,
