@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NumberGeneratorService } from '../number-generator.service';
+import { NumberGeneratorService } from '../shared/number-generator.service';
 
 @Component({
   selector: 'app-result',

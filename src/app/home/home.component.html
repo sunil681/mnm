@@ -1,5 +1,7 @@
 <form>
-  <span>Enter a number</span>
-  <input name="num" type="number" [(ngModel)]="num">
+  <div>
+    <label for="num">Enter a number</label>
+    <input name="num" type="number" [(ngModel)]="num">
+  </div>
   <button (click)="onSubmit(num)">Submit</button>
 </form>

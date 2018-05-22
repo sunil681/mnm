@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NumberGeneratorService } from './number-generator.service';
+import { NumberGeneratorService } from './shared/number-generator.service';
 import { ResultComponent } from './result/result.component';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'result', component: ResultComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: '**', redirectTo: '/home',  pathMatch: 'full'}
+  { path: '**', redirectTo: '/',  pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NumberGeneratorService } from '../number-generator.service';
+import { NumberGeneratorService } from '../shared/number-generator.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router} from '@angular/router';
 
@@ -21,6 +21,6 @@ export class HomeComponent implements OnInit {
 
   onSubmit(num) {
     this.numberGenService.addNumber(num);
-    this.router.navigate(['/result']);
+    this.router.navigate(['result']);
   }
 }
