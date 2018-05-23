@@ -16,4 +16,8 @@ export class NumberGeneratorService {
       return agg + cur;
     }, 0);
   }
+
+  getNumbers(): Array<number> {
+    return this.arrNumbers;
+  }
 }

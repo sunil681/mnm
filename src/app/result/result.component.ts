@@ -7,11 +7,12 @@ import { NumberGeneratorService } from '../shared/number-generator.service';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-
+  allNumbers: Array<number> = [];
   total: number;
   constructor(private numGenService: NumberGeneratorService) { }
 
   ngOnInit() {
+    this.allNumbers = [...this.numGenService.getNumbers()];
     this.total = this.numGenService.calculateSum();
   }
 
